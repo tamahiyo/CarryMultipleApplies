@@ -1,0 +1,9 @@
+CarryMultipleAppliesWPF/bin/
+CarryMultipleAppliesCommon/bin/
+CarryMultipleAppliesDataAccess/bin/
+CarryMultipleAppliesService/bin/
+*/obj/
+*/Connected Services/
+/.vs/
+
+CarryMultipleAppliesDataAccess/CarryMultipleApplies.db

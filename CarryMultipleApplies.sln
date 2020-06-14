@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarryMultipleAppliesWPF", "CarryMultipleAppliesWPF\CarryMultipleAppliesWPF.csproj", "{2C8FEDDB-0A97-4DA5-83A2-AC625D493906}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9} = {B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}
+		{A226BDDA-9E9C-4C74-916D-0E9CE9357101} = {A226BDDA-9E9C-4C74-916D-0E9CE9357101}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarryMultipleAppliesService", "CarryMultipleAppliesService\CarryMultipleAppliesService.csproj", "{A226BDDA-9E9C-4C74-916D-0E9CE9357101}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9} = {B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarryMultipleAppliesDataAccess", "CarryMultipleAppliesDataAccess\CarryMultipleAppliesDataAccess.csproj", "{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarryMultipleAppliesCommon", "CarryMultipleAppliesCommon\CarryMultipleAppliesCommon.csproj", "{BCC8D382-47B8-4764-BF2D-16353C889351}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CarryMultipleAppliesWPFInstaller", "CarryMultipleAppliesWPFInstaller\CarryMultipleAppliesWPFInstaller.vdproj", "{93305978-8F13-4C31-9910-9811398CFDF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C8FEDDB-0A97-4DA5-83A2-AC625D493906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8FEDDB-0A97-4DA5-83A2-AC625D493906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8FEDDB-0A97-4DA5-83A2-AC625D493906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8FEDDB-0A97-4DA5-83A2-AC625D493906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A226BDDA-9E9C-4C74-916D-0E9CE9357101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A226BDDA-9E9C-4C74-916D-0E9CE9357101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A226BDDA-9E9C-4C74-916D-0E9CE9357101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A226BDDA-9E9C-4C74-916D-0E9CE9357101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC8D382-47B8-4764-BF2D-16353C889351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC8D382-47B8-4764-BF2D-16353C889351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC8D382-47B8-4764-BF2D-16353C889351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC8D382-47B8-4764-BF2D-16353C889351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93305978-8F13-4C31-9910-9811398CFDF5}.Debug|Any CPU.ActiveCfg = Debug
+		{93305978-8F13-4C31-9910-9811398CFDF5}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B5DCF4D-C405-4504-A046-147BC720C964}
+	EndGlobalSection
+EndGlobal

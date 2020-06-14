@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B65F34A5-C17F-4AD3-BC07-032BBFC6EEA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarryMultipleAppliesDataAccess</RootNamespace>
+    <AssemblyName>CarryMultipleAppliesDataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.113.1\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6.Migrations, Version=1.0.106.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.Migrations.1.0.106\lib\System.Data.SQLite.EF6.Migrations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CarryMultipleAppliesModel.cs" />
+    <Compile Include="DataTier\Core\Domain\M_Users.cs" />
+    <Compile Include="DataTier\Core\Domain\M_ChooseableDomains.cs" />
+    <Compile Include="DataTier\Core\Domain\M_Ages.cs" />
+    <Compile Include="DataTier\Core\Domain\M_Events.cs" />
+    <Compile Include="DataTier\Core\Domain\M_Jobs.cs" />
+    <Compile Include="DataTier\Core\Domain\M_Prefectures.cs" />
+    <Compile Include="DataTier\Core\Domain\M_StoreEventDisplays.cs" />
+    <Compile Include="DataTier\Core\Domain\M_StoreEvents.cs" />
+    <Compile Include="DataTier\Core\Domain\T_ApplyHistories.cs" />
+    <Compile Include="DataTier\Core\Domain\T_ApplyUsers.cs" />
+    <Compile Include="DataTier\Core\IUnitOfWorks.cs" />
+    <Compile Include="DataTier\Core\Repositories\IGenericRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_UsersRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_ChooseableDomainsRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_AgesRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_EventsRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_JobsRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_PrefecturesRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_StoreEventDisplaysRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IM_StoreEventsRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IT_ApplyHistoriesRepository.cs" />
+    <Compile Include="DataTier\Core\Repositories\IT_ApplyUsersRepository.cs" />
+    <Compile Include="DataTier\Persistance\CarryMultipleAppliesConfiguration.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\GenericRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_UsersRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_ChooseableDomainsRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_AgesRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_EventsRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_JobsRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_PrefecturesRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_StoreEventDisplaysRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\M_StoreEventsRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\T_ApplyHistoriesRepository.cs" />
+    <Compile Include="DataTier\Persistance\Repositories\T_ApplyUsersRepository.cs" />
+    <Compile Include="DataTier\Persistance\UnitOfWorks.cs" />
+    <Compile Include="Migrations\202006072320404_AddTable_M_UserAndAddColumn_UserNameByT_ApplyUsersAndT_ApplyHistories.cs" />
+    <Compile Include="Migrations\202006072320404_AddTable_M_UserAndAddColumn_UserNameByT_ApplyUsersAndT_ApplyHistories.designer.cs">
+      <DependentUpon>202006072320404_AddTable_M_UserAndAddColumn_UserNameByT_ApplyUsersAndT_ApplyHistories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072339435_DropTale_T_ApplyUsers.cs" />
+    <Compile Include="Migrations\202006072339435_DropTale_T_ApplyUsers.designer.cs">
+      <DependentUpon>202006072339435_DropTale_T_ApplyUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072340567_ReplaceTable_T_ApplyUsers.cs" />
+    <Compile Include="Migrations\202006072340567_ReplaceTable_T_ApplyUsers.designer.cs">
+      <DependentUpon>202006072340567_ReplaceTable_T_ApplyUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072343298_DropTableAgain_T_ApplyUsers.cs" />
+    <Compile Include="Migrations\202006072343298_DropTableAgain_T_ApplyUsers.designer.cs">
+      <DependentUpon>202006072343298_DropTableAgain_T_ApplyUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072344128_ReplaceTableAgain_T_ApplyUsers.cs" />
+    <Compile Include="Migrations\202006072344128_ReplaceTableAgain_T_ApplyUsers.designer.cs">
+      <DependentUpon>202006072344128_ReplaceTableAgain_T_ApplyUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072352153_DropTableAgain_T_ApplyUsersType.cs" />
+    <Compile Include="Migrations\202006072352153_DropTableAgain_T_ApplyUsersType.designer.cs">
+      <DependentUpon>202006072352153_DropTableAgain_T_ApplyUsersType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072352597_ReplaceTableAgain_T_ApplyUsers1.cs" />
+    <Compile Include="Migrations\202006072352597_ReplaceTableAgain_T_ApplyUsers1.designer.cs">
+      <DependentUpon>202006072352597_ReplaceTableAgain_T_ApplyUsers1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131212173_DropT_ApplyAndT_Histories.cs" />
+    <Compile Include="Migrations\202006131212173_DropT_ApplyAndT_Histories.designer.cs">
+      <DependentUpon>202006131212173_DropT_ApplyAndT_Histories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131212493_AlterT_ApplyAndT_Histories.cs" />
+    <Compile Include="Migrations\202006131212493_AlterT_ApplyAndT_Histories.designer.cs">
+      <DependentUpon>202006131212493_AlterT_ApplyAndT_Histories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131427370_DropT_Histories.cs" />
+    <Compile Include="Migrations\202006131427370_DropT_Histories.designer.cs">
+      <DependentUpon>202006131427370_DropT_Histories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131428169_CreateT_Histories.cs" />
+    <Compile Include="Migrations\202006131428169_CreateT_Histories.designer.cs">
+      <DependentUpon>202006131428169_CreateT_Histories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131855202_CreateT_Histories1.cs" />
+    <Compile Include="Migrations\202006131855202_CreateT_Histories1.designer.cs">
+      <DependentUpon>202006131855202_CreateT_Histories1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131901594_Drop.cs" />
+    <Compile Include="Migrations\202006131901594_Drop.designer.cs">
+      <DependentUpon>202006131901594_Drop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131903073_Create.cs" />
+    <Compile Include="Migrations\202006131903073_Create.designer.cs">
+      <DependentUpon>202006131903073_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131914008_Drop1.cs" />
+    <Compile Include="Migrations\202006131914008_Drop1.designer.cs">
+      <DependentUpon>202006131914008_Drop1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006131914578_Create1.cs" />
+    <Compile Include="Migrations\202006131914578_Create1.designer.cs">
+      <DependentUpon>202006131914578_Create1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppliesHistories.cs" />
+    <Compile Include="Models\LastApplyUserInfo.cs" />
+    <Compile Include="Migrations\202006061359255_InitialMigration.cs" />
+    <Compile Include="Migrations\202006061359255_InitialMigration.designer.cs">
+      <DependentUpon>202006061359255_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006061521319_DropTable_M_EventsAndM_StoreEvents.cs" />
+    <Compile Include="Migrations\202006061521319_DropTable_M_EventsAndM_StoreEvents.Designer.cs">
+      <DependentUpon>202006061521319_DropTable_M_EventsAndM_StoreEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006061525120_AddTable_M_EventsAndM_StoreEvents.cs" />
+    <Compile Include="Migrations\202006061525120_AddTable_M_EventsAndM_StoreEvents.designer.cs">
+      <DependentUpon>202006061525120_AddTable_M_EventsAndM_StoreEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006072220227_AddTable_M_ChooseableDomains.cs" />
+    <Compile Include="Migrations\202006072220227_AddTable_M_ChooseableDomains.designer.cs">
+      <DependentUpon>202006072220227_AddTable_M_ChooseableDomains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006061359255_InitialMigration.resx">
+      <DependentUpon>202006061359255_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006061521319_DropTable_M_EventsAndM_StoreEvents.resx">
+      <DependentUpon>202006061521319_DropTable_M_EventsAndM_StoreEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006061525120_AddTable_M_EventsAndM_StoreEvents.resx">
+      <DependentUpon>202006061525120_AddTable_M_EventsAndM_StoreEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072220227_AddTable_M_ChooseableDomains.resx">
+      <DependentUpon>202006072220227_AddTable_M_ChooseableDomains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072320404_AddTable_M_UserAndAddColumn_UserNameByT_ApplyUsersAndT_ApplyHistories.resx">
+      <DependentUpon>202006072320404_AddTable_M_UserAndAddColumn_UserNameByT_ApplyUsersAndT_ApplyHistories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072339435_DropTale_T_ApplyUsers.resx">
+      <DependentUpon>202006072339435_DropTale_T_ApplyUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072340567_ReplaceTable_T_ApplyUsers.resx">
+      <DependentUpon>202006072340567_ReplaceTable_T_ApplyUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072343298_DropTableAgain_T_ApplyUsers.resx">
+      <DependentUpon>202006072343298_DropTableAgain_T_ApplyUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072344128_ReplaceTableAgain_T_ApplyUsers.resx">
+      <DependentUpon>202006072344128_ReplaceTableAgain_T_ApplyUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072352153_DropTableAgain_T_ApplyUsersType.resx">
+      <DependentUpon>202006072352153_DropTableAgain_T_ApplyUsersType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006072352597_ReplaceTableAgain_T_ApplyUsers1.resx">
+      <DependentUpon>202006072352597_ReplaceTableAgain_T_ApplyUsers1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131212173_DropT_ApplyAndT_Histories.resx">
+      <DependentUpon>202006131212173_DropT_ApplyAndT_Histories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131212493_AlterT_ApplyAndT_Histories.resx">
+      <DependentUpon>202006131212493_AlterT_ApplyAndT_Histories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131427370_DropT_Histories.resx">
+      <DependentUpon>202006131427370_DropT_Histories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131428169_CreateT_Histories.resx">
+      <DependentUpon>202006131428169_CreateT_Histories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131855202_CreateT_Histories1.resx">
+      <DependentUpon>202006131855202_CreateT_Histories1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131901594_Drop.resx">
+      <DependentUpon>202006131901594_Drop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131903073_Create.resx">
+      <DependentUpon>202006131903073_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131914008_Drop1.resx">
+      <DependentUpon>202006131914008_Drop1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006131914578_Create1.resx">
+      <DependentUpon>202006131914578_Create1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarryMultipleAppliesCommon\CarryMultipleAppliesCommon.csproj">
+      <Project>{bcc8d382-47b8-4764-bf2d-16353c889351}</Project>
+      <Name>CarryMultipleAppliesCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
+</Project>
