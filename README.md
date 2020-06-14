@@ -1,0 +1,2 @@
+# CarryMultipleApplies
+石原夏織さんリリースイベント一括応募ツール
